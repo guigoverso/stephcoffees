@@ -1,0 +1,288 @@
+/*
+CORES:
+- Títulos: #F46F6F
+- Fundo 1: #FFD8CF
+- Fundo 2 e Banner: #FEEFCD
+- Fundo 3 e Texto botão: #F6EFE0
+- Fundo 4: #F6F6F6
+- Bordas: #FBCCAD
+*/
+
+@font-face {
+    font-family: Chewy;
+    src: url(../fonts/Chewy-Regular.ttf)
+}
+
+@font-face {
+    font-family: open-sans;
+    src: url(../fonts/OpenSans-Regular.ttf)
+}
+
+@font-face {
+    font-family: open-sans-light;
+    src: url(../fonts/OpenSans-Light.ttf)
+}
+
+* {font-family: open-sans, sans-serif; box-sizing: border-box;}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.title-icon {
+    max-height: 2.75rem !important;
+}
+
+.title-font {
+   font-family: Chewy, sans-serif;
+}
+
+.title-color {
+    color: #F46F6F !important;
+}
+
+.title-size {
+    font-size: 8vw;
+    padding-left: 30px;
+}
+
+.article {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.article p:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.photo {
+    border: 20px solid rgba(255, 255, 255, .8);
+    border-bottom-width: 50px;
+    box-shadow: 1px 1px 5px black;
+
+    position: relative;
+}
+
+.photo:hover .photo-subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.photo-subtitle {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .8);
+    text-align: justify;
+    font-size: 12px;
+}
+
+.photo-subtitle h4 {
+    margin-bottom: 20px;
+}
+
+.image-fit {
+    object-fit: cover;
+}
+
+.my-form .field{
+    margin-bottom: 35px;
+}
+
+.my-form .field:last-child {
+    margin-bottom: 0;
+}
+
+.my-input {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 8px dotted #FBCCAD;
+    color: #F46F6F;
+    font-size: 24px;
+    background: none;
+    width: 70%;
+}
+
+.my-input:hover {
+    border-bottom-color: #FBCCAD;
+}
+
+.my-input:focus {
+    border-color: none;
+    box-shadow: none;
+    border-bottom-color: #FBCCAD;
+}
+
+.my-input::placeholder {
+    color:  #F46F6F !important;
+}
+
+.my-select-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.my-select-title {
+    color: #F46F6F;
+    font-size: 24px;
+}
+
+.my-select {
+    color: #F46F6F;
+    border: none;
+    border: 2px solid #FBCCAD;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.my-select option {
+    font-size: 16px;
+}
+
+.my-text-area {
+    width: 70%;
+    border: 3px solid #FBCCAD;
+    resize: none;
+}
+
+.my-button {
+    border: 1px solid #FBCCAD !important;
+    background-color: #F46F6F;
+    color: #F6EFE0;
+}
+
+.my-button:hover {
+    color: #F6EFE0;
+    background-color: #e06868;
+}
+
+.banner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.banner-box {
+    min-width: 280px;
+    min-height: 190px;
+    width: 35vw;
+    height: 25vw;
+    background-color: #FEEFCD;
+    border: solid 10px #F46F6F;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.banner-image {
+    background-image: url(../img/steph_with_coffee.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-left {
+    z-index: 1;
+    position: absolute;
+    margin-bottom: 10vw;
+    margin-right: 25vw;
+}
+
+.banner-right {
+    z-index: 0;
+    position: absolute;
+    margin-top: 10vw;
+    margin-left: 25vw;
+}
+
+.banner-subtitle {
+    display: none;
+}
+
+.banner-right:hover {
+    z-index: 2;
+}
+
+.banner-right:hover .banner-subtitle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.banner-right:hover .banner-subtitle p{
+    width: 100%;
+    background-color: #F46F6F;
+    color: #F6EFE0;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.my-navbar-burger {
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.my-navbar-burger:hover {
+    background-color: #F46F6F;
+    color: #F6EFE0;
+
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.my-navbar-end a{
+    color: #F46F6F !important;
+    background: none !important;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.my-navbar-end a:hover{
+    color: #F6EFE0 !important;
+    background-color: #F46F6F !important;
+}
+
+.background-transparent {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.background-1 {
+    background-color: #FFD8CF;  
+}
+
+.background-2 {
+    background-color: #FEEFCD;
+}
+
+.background-3 {
+    background-color: #F6EFE0;
+}
+
+.background-4 {
+    background-color: #F6F6F6;
+}
+
+@media(max-width: 768px) {
+    .tile .photo {
+        margin: auto !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .columns-reverse {
+        flex-direction: row-reverse;
+    }
+}
